@@ -1,0 +1,618 @@
+{
+	"info": {
+		"name": "Arena baby franquia",
+		"_postman_id": "fc197fa4-d45b-bd14-1aa9-016643a16178",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "clients by shop",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shop_id\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/web/client/index",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"web",
+						"client",
+						"index"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "remove credit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shop_id\": 1,\n\t\"user_id\": 5,\n\t\"value\": 20\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/web/client/remove_credit",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"web",
+						"client",
+						"remove_credit"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "give babycoin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shop_id\": 1,\n\t\"user_id\": 5,\n\t\"value\": 3\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/web/client/give_babycoin",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"web",
+						"client",
+						"give_babycoin"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "remove babycoin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shop_id\": 1,\n\t\"user_id\": 5,\n\t\"value\": 3\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/web/client/remove_babycoin",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"web",
+						"client",
+						"remove_babycoin"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "news all",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shop_id\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/web/news/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"web",
+						"news",
+						"all"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create news",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shop_id\": 1,\n\t\"title\": \"Lula preso\",\n\t\"description\": \"lula foi preso.\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/web/news/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"web",
+						"news",
+						"create"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "list product evaluate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shop_id\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/web/products/evaluate/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"web",
+						"products",
+						"evaluate",
+						"all"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "refuse project",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"product_evaluate_id\": 5\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/web/products/evaluate/refuse",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"web",
+						"products",
+						"evaluate",
+						"refuse"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "evaluate product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"product_evaluate_id\": 5,\n\t\"value\": 20\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/web/products/evaluate/accept",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"web",
+						"products",
+						"evaluate",
+						"accept"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "profile client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cpf\": \"043412444306\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/web/client/profile",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"web",
+						"client",
+						"profile"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "clients transactions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\": 5,\n\t\"shop_id\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/web/client/transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"web",
+						"client",
+						"transaction"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "convert credit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\": 5,\n\t\"shop_id\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/web/client/convert_credit",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"web",
+						"client",
+						"convert_credit"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "give credit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\": 5,\n\t\"shop_id\": 1,\n\t\"value\": 12.50,\n\t\"order_number\": \"2727987AB\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/web/client/give_credit",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"web",
+						"client",
+						"give_credit"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get stars",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\": 5,\n\t\"shop_id\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/web/client/stars",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"web",
+						"client",
+						"stars"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "give stars",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\": 5,\n\t\"shop_id\": 1,\n\t\"quantity\": 50\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/web/client/give_stars",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"web",
+						"client",
+						"give_stars"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shop_id\": 1,\n\t\"name\": \"Jonathan\",\n\t\"profile\": 1,\n\t\"email\": \"jonathan.nascimento@teste.com\",\n\t\"cpf\": \"123.456.689-06\",\n\t\t\"cityID\": 1100015,\n\t\t\"stateID\": 11,\t\n\t\"gender\": \"coisado\",\n\t\"neighborhood\": \"damas\",\n\t \"password\": \"12345678\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/web/client/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"web",
+						"client",
+						"create"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost:8000/api/auth/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "sign_in",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"cnpj\": \"739479187987498374983\",\n\t\t\"password\": \"12345678\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/web/auth/sign_in",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"web",
+						"auth",
+						"sign_in"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,866 @@
+{
+	"info": {
+		"name": "Arena baby App",
+		"_postman_id": "62dfb93f-1b65-b74e-ac25-3d9ad5cc2aab",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sign_in",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"cpf\": \"043412444306\",\n\t\t\"password\": \"323232es\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/auth/sign_in",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"sign_in"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"cpf\": \"04016733200\",\n\t\t\"password\": \"12345678\",\n\t\t\"name\": \"jonathan\",\n\t\t\"gender\": \"masculino\",\n\t\t\"cityID\": 1100015,\n\t\t\"stateID\": 11,\t\n\t\t\"email\": \"jonathanhather@hotmail.com\",\n\t\t\"neighborhood\": \"Damas\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "cities",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"cpf\": \"04016733200\",\n\t\t\"password\": \"12345678\",\n\t\t\"name\": \"jonathan\",\n\t\t\"gender\": \"masculino\",\n\t\t\"cityID\": 1100015,\n\t\t\"stateID\": 11,\t\n\t\t\"email\": \"jonathanhather@hotmail.com\",\n\t\t\"neighborhood\": \"Damas\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/cities?stateID=31",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cities"
+					],
+					"query": [
+						{
+							"key": "stateID",
+							"value": "31",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "states",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/states",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"states"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "facebook profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"token\": \"EAAZAb676r6PYBACC2msxzBPE7HjFLchP68HOTCBPHM9J3OZBXzY9nB4P9wjxfldwh5ZCKu9ml9wrIVer4xYhZBj9xg2zEUDNUV135FhP2GgWGhDwhqt2G0z6xkE2ZAe0umJGjHQMOZC1U8YTj3gbn7JwlgYWd6AVfAy8TbqcDZCltKHnnnpZCI8YtnGIqzAHwE2XqzvLzjKLMePKyv7uENUWQUJuZAQrVT8EVbe3PKBpw6qd89Sh76Gnm\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/auth/facebook/profile",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"facebook",
+						"profile"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "forgot password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"email\": \"jonathannascimento70@gmail.com\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/password/forgot",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"password",
+						"forgot"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get Credit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "BearereyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvYXV0aC9zaWduX2luIiwiaWF0IjoxNTIyMzMwNTc5LCJleHAiOjE1NTM0MzQ1NzksIm5iZiI6MTUyMjMzMDU3OSwianRpIjoiQ1BZRjJkSFNqYVU3TUl6aiJ9.qBdS_th9aHsdt9IM9swrqPI4QJQwgsy7Bmx9dAw4V2k"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/credit/show",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"credit",
+						"show"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "accept Credit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/credit/accept",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"credit",
+						"accept"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost:8000/api/auth/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "refuse Credit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5,\n\t\"answerOption\": 2\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/credit/reject",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"credit",
+						"reject"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "follow shop",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5,\n\t\"shop_id\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/shop/follow",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"shop",
+						"follow"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "news",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5\t\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/news",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"news"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "news like",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5,\n\t\"news_id\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/news/like",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"news",
+						"like"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "courses",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/courses",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"courses"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "course acquire",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5,\n\t\"course_id\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/courses/acquire",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"courses",
+						"acquire"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "my courses",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/courses/my_courses",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"courses",
+						"my_courses"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "news share",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5,\n\t\"news_id\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/news/share",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"news",
+						"share"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create evaluate product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5,\n\t\"shop_id\": 1,\n\t\"name\": \"sapatinho de bebe\",\n\t\"is_donate\": false\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/products/evaluate/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"evaluate",
+						"create"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "faq show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5,\n\t\"shop_id\": 1,\n\t\"name\": \"casaco de pano\",\n\t\"is_donate\": false\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/faq/show?type=store",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"faq",
+						"show"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "store",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "show evaluate product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/products/evaluate/show",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"evaluate",
+						"show"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "accept evaluate product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5,\n\t\"product_id\": 6\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/products/evaluate/accept",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"evaluate",
+						"accept"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "refuse evaluate product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "BearereyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvYXV0aC9zaWduX2luIiwiaWF0IjoxNTIxNTY2MDgxLCJleHAiOjE1NTI2NzAwODEsIm5iZiI6MTUyMTU2NjA4MSwianRpIjoiU2V1VlFSVE44bDNFQnFZMCJ9.sE_i7QdHKbnGa5cmBjpfjjmY7ncARgkIlt4bG14QI2A"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5,\n\t\"product_id\": 5,\n\t\"message\": \"\",\n\t\"answerOption\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/products/evaluate/reject",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"evaluate",
+						"reject"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "shops",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5,\n\t\"answerOption\": 2\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/shops?latitude=0&longitude=0",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"shops"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "0",
+							"equals": true
+						},
+						{
+							"key": "longitude",
+							"value": "0",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "detail shop",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5,\n\t\"shop_id\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/shop/detail",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"shop",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "shop_id",
+							"value": "1",
+							"equals": true,
+							"disabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "home",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"id\": 5\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/home",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"home"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

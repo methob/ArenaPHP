@@ -1,0 +1,776 @@
+{
+	"info": {
+		"name": "Arena baby Admin",
+		"_postman_id": "bfcc7997-c71b-4520-e90a-410bec40726f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sign in",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"cpf\": \"04916744306\",\n\t\t\"password\": \"12345678\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/auth/sign_in",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"sign_in"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "dashboard",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 5,\n\t\"shop_id\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/dashboard",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"dashboard"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "shop",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shop_id\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/shop/billing",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"shop",
+						"billing"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "clients by shop",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shop_id\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/client/index",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"client",
+						"index"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "detail clients",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\": 5\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/client/detail",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"client",
+						"detail"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "news all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\": 5\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/news/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"news",
+						"all"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "billing",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shop_id\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/shop/billing",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"shop",
+						"billing"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "edit course",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"description\": \"DESCRICAO DESCRITIVA\",\n\t\"value\": 1,\n\t\"title\": \"TITULO\",\n\t\"shop_news_id\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/course/edit",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"edit"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "enable/disable course",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"course_id\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/course/enable_or_disable",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"enable_or_disable"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create course",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "CRIANDO CURSO",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "CURSO CRIADO COM SUCESSO!",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "value",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "pdf",
+							"value": "",
+							"description": "",
+							"type": "file"
+						},
+						{
+							"key": "image",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/course/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"create"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create new",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Ola tudo bem?",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "estamos vendendo de tudo.",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "photos[0]",
+							"value": "",
+							"description": "",
+							"type": "file"
+						},
+						{
+							"key": "photos[1]",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/news/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"news",
+						"create"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "course all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Ola tudo bem?",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "estamos vendendo de tudo.",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "photos[0]",
+							"value": "",
+							"description": "",
+							"type": "file"
+						},
+						{
+							"key": "photos[1]",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/course/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"course",
+						"all"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "show report",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"reportType\": 1,\n\t\"reportFilterType\": \"\",\n\t\"initialDate\": \"\",\n\t\"finalDate\": \"\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/report/show",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"report",
+						"show"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create shop",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cep",
+							"value": "64426090",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "logradouro",
+							"value": "hfkjsh",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "complement",
+							"value": "djflkjdflkd",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "number",
+							"value": "12",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "cityID",
+							"value": "6",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "stateID",
+							"value": "23",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "cnpj",
+							"value": "739479187987498374983",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "socialName",
+							"value": "djfjsdklfdsj",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "nickname",
+							"value": "dfjlksdjfkl",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "owner",
+							"value": "joao da silva",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "joao25@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "3423432432",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "cellphone",
+							"value": "3423432",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "facebook",
+							"value": "dfsdfsdfdsf",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "instagram",
+							"value": "sdfsdfsdfdfsdfs",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "exclusivePage",
+							"value": "sdfdfsddfd",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "photos[0]",
+							"value": "",
+							"description": "",
+							"type": "file"
+						},
+						{
+							"key": "photos[1]",
+							"value": "",
+							"description": "",
+							"type": "file"
+						},
+						{
+							"key": "isFranchise",
+							"value": "true",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "neighborhood",
+							"value": "dahdsjdhakjdhska",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/shop/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"shop",
+						"create"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "show all clients",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost:8000/client/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"client",
+						"all"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "search cep",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cep\": 60426090\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/cep/search?cep=60426099",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cep",
+						"search"
+					],
+					"query": [
+						{
+							"key": "cep",
+							"value": "60426099",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{header}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost:8000/api/auth/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
